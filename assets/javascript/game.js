@@ -4,24 +4,30 @@ $(document).ready(function() {
 
     var userScore = 0;
 
-    var targetScore = 0;
+    var targetScore = goalScore(19,120);
+    console.log(targetScore);
 
     var wins = 0;
     var losses = 0;
 
     
-    var redBoi = 0;
-    var blueBoi = 0;
-    var greenBoi = 0;
-    var yellowBoi = 0;
+    var redBoi = crysalGenerator(1,12);
+    console.log(redBoi);
+
+    var blueBoi = crysalGenerator(1,12);
+    console.log(blueBoi);
+
+    var greenBoi = crysalGenerator(1,12);
+    console.log(greenBoi);
+
+    var yellowBoi = crysalGenerator(1,12);
+    console.log(yellowBoi);
 
     // Function to generate random crystal numbers 
 
     function crysalGenerator (min, max) {
-        return Math.floor(Math.random()* (max-min)) + min;
+       return Math.floor(Math.random()* (max-min)) + min;
     };
-
-    crysalGenerator(1,12);
 
     // Function to generate the target score 
 
@@ -34,10 +40,13 @@ $(document).ready(function() {
     // Creat function to start the game 
 
     function startGame() {
+        // Show Target Score number in div
+        $("#goal-score").append(targetScore);
 
-        // Generate a random number for the target score variable
 
     }
+
+    startGame();
 
     
     
